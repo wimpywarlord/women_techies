@@ -1,0 +1,12 @@
+body
+{
+	background-color: #FFBAF9;
+}
+#box_for_the_form
+{
+	padding: 50px;
+}
+
+pre{
+    white-space: pre-wrap;
+}

@@ -12,7 +12,9 @@ app.get("/",function(req,res){
 	res.render("home.ejs");
 })
 
-
+app.get("/offer_letter_of_employment_form_fill",function(req,res){
+	res.render("offer_letter_of_employment_form_fill.ejs");
+})
 
 app.listen( process.env.PORT || 8000 , function(){
 	console.log("SERVER 8000 HAS STARTED");
