@@ -1,0 +1,24 @@
+{
+  "name": "women_techies",
+  "version": "1.0.0",
+  "description": "Deceptiform for women techies",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wimpywarlord/women_techies.git"
+  },
+  "author": "Kshitij Dhyani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wimpywarlord/women_techies/issues"
+  },
+  "homepage": "https://github.com/wimpywarlord/women_techies#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
