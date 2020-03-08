@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Oxanium&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* svg{
+    margin: 0;
+    padding: 0;
+} */
+
+.start{
+    background: url("/svg/back.svg") no-repeat;
+    object-fit: cover; 
+    background-size: cover; 
+}
+
+#tagline{
+    position: absolute;
+}
+
+#text{
+    position: relative;
+    right: 60px;
+}
+
+.next{
+    color: black;
+}
+
+
+
+#text path:nth-child(1){
+    stroke-dasharray: 536.2118530273438;
+    stroke-dashoffset: 536.2118530273438;
+    animation: line 3s  ease forwards;
+    
+}
+#text path:nth-child(2){
+    stroke-dasharray: 519.10693359375;
+    stroke-dashoffset: 519.10693359375;
+    animation: line 3s ease forwards;
+}
+#text path:nth-child(3){
+    stroke-dasharray: 391.74310302734375;
+    stroke-dashoffset:391.74310302734375;
+    animation: line 3s ease forwards 0.6s;
+}
+#text path:nth-child(4){
+    stroke-dasharray: 519.5066528320312;
+    stroke-dashoffset: 519.5066528320312;
+    animation: line 3s ease forwards 0.9s;
+}
+#text path:nth-child(5){
+    stroke-dasharray: 430.87103271484375;
+    stroke-dashoffset: 430.87103271484375;
+    animation: line 3s ease forwards 1.2s;
+}
+#text path:nth-child(6){
+    stroke-dasharray: 412.5826110839844;
+    stroke-dashoffset: 412.5826110839844;
+    animation: line 3s ease forwards 1.6s;
+}
+#text path:nth-child(7){
+    stroke-dasharray: 259.52032470703125;
+    stroke-dashoffset:  259.52032470703125;
+    animation: line 3s ease forwards 1.9s;
+}
+#text path:nth-child(8){
+    stroke-dasharray: 433.1510925292969;
+    stroke-dashoffset: 433.1510925292969;
+    animation: line 3s ease forwards 2.2s;
+}
+#text path:nth-child(9){
+    stroke-dasharray: 520.4185180664062;
+    stroke-dashoffset: 520.4185180664062;
+    animation: line 3s ease forwards 2.5s;
+}
+#text path:nth-child(10){
+    
+    stroke-dasharray: 527.1253662109375;
+    stroke-dashoffset: 527.1253662109375;
+    animation: line 3s ease forwards 2.8s;
+}
+
+#text path:nth-child(11){
+    
+    stroke-dasharray: 763.8844604492188;
+    stroke-dashoffset: 763.8844604492188;
+    animation: line 3s ease forwards 3.1s;
+}
+
+#text path:nth-child(12){
+    
+    stroke-dasharray: 763.8844604492188;
+    stroke-dashoffset: 763.8844604492188;
+    animation: line 3s ease forwards 3.4s;
+}
+
+#text path{
+    fill: transparent;
+}
+
+
+
+@keyframes line{
+    from{
+       
+        fill: transparent;
+    }
+    to{
+        
+        stroke: #FF0062;
+        fill:#FF0062;
+        stroke-dashoffset:0 ;
+        
+    }
+} 
+
+
+/*clearfixes*/
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+/*animation element*/
+
+.animation-element {
+  position: relative;
+  width: 30%;
+  margin: 50px;
+  float: left;
+  left: 100px;
+}
+
+/*bounce up animation for the subject*/
+
+.bounce-up .subject {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view .subject {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+
+
+
+.bg1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+background: linear-gradient(90deg,#EECDA3 39%, #EF629F 81%);
+}
+
+.jb2{
+    margin-left: 200px;
+  
+}
+.jb3{
+    background: none;
+}
+.display-6{
+    font-size: 2rem;
+    font-family: 'Oxanium', cursive;
+}
+
+.jumbotron p{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.jumbotron{
+    height:460px;
+}
+
+
+.jumbotron ol li{
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 10px;
+}
