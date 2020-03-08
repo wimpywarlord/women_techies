@@ -16,16 +16,39 @@ body{
    
 }
 
+
+#tv {
+  padding: 50px;
+  width: 80%;
+  margin-left: 100px;
+  margin-right: 100px;
+  position: absolute;
+  margin:100px;
+  
+  background: white,linear-gradient(#f9f047, #0fd850);
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  color: black;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+#tv:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+/* 
 .info{
     position: absolute;
     margin:100px;
+    margin-top: 50px;
     background: white;
     border-width: 2px;
     border-color: white;
     border-radius: 24px;
     box-shadow: 5px 10px 10px rgb(108, 181, 214);
     
-}
+} */
 
 .info h1{
     margin:30px;

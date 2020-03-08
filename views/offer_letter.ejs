@@ -170,7 +170,11 @@
 			</form>
 		</div>
 		<div class="col-lg-8" id="box_for_the_form">
-			<div class="box ">
+			<div id="tv">
+				<span class="span1"></span>
+				<span class="span2"></span>
+				<span class="span3"></span>
+				<span class="span4"></span>
 				<div class="content">
 			<pre id="output">
                 <article>
@@ -258,8 +262,21 @@ Date
 	</div>
 	</div>
 	<div id="editor"></div>
-	<button id='save'>Generate PDF</button>
+    <button id='save'>Generate PDF</button>
+    
+
 </body>
+
+<script type="text/javascript">
+    $("#save").click(function() {
+        var text = $("#output")[0].outerHTML;
+       
+        var popup = window.open("", "popup");
+        popup.document.body.innerHTML = text ;
+        popup.focus();
+        popup.print();
+        });
+</script>
 	<script type="text/javascript">
 		$('input[type=radio][name=part_or_full_time]').on('change', function() {
 			  switch ($(this).val()) {
@@ -282,14 +299,5 @@ Date
 			  }
 			});
 	</script>
-	<script type="text/javascript">
-		$("#save").click(function() {
-		  var text = $("#output")[0].outerHTML;
-		  var styles = $("style")[0].outerHTML;
-		  var popup = window.open("", "popup");
-		  popup.document.body.innerHTML = text + styles;
-		  popup.focus();
-		  popup.print();
-		});
-	</script>
+	
 </html>
