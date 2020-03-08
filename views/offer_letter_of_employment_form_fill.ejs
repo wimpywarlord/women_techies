@@ -21,6 +21,8 @@
 	<!-- JS -->
 	<script type="text/javascript" src="/js/offer_letter_of_employment_form_fill.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+
 </head>
 <body>
 	<div class="row">
@@ -148,6 +150,8 @@ Date
 			</pre>
 		</div>
 	</div>
+	<div id="editor"></div>
+	<button id="cmd">generate PDF</button>
 </body>
 	<script type="text/javascript">
 		$('input[type=radio][name=part_or_full_time]').on('change', function() {
@@ -170,5 +174,22 @@ Date
 			      break;
 			  }
 			});
+	</script>
+	<script type="text/javascript">
+		var doc = new jsPDF();
+		var specialElementHandlers = {
+		    '#editor': function (element, renderer) {
+		        return true;
+		    }
+		};
+
+		$('#cmd').click(function () {
+			console.log("sadsas");
+		    doc.fromHTML($('#box_for_the_form').html(), 15, 15, {
+		        'width': 170,
+		            'elementHandlers': specialElementHandlers
+		    });
+		    doc.save('sample-file.pdf');
+		});
 	</script>
 </html>
