@@ -68,7 +68,7 @@
 			</form>
 		</div>
 		<div class="col-lg-8" id="box_for_the_form">
-			<pre>
+			<pre id="output">
 <span class="space_for_representative_of_the_employer_who_is_offering_the_position">________</span>
 <span class="space_for_company_name_of_the_employer">________</span>
 <span class="space_for_employers_full_business_address">________</span>
@@ -151,7 +151,7 @@ Date
 		</div>
 	</div>
 	<div id="editor"></div>
-	<button id="cmd">generate PDF</button>
+	<button id='save'>Generate PDF</button>
 </body>
 	<script type="text/javascript">
 		$('input[type=radio][name=part_or_full_time]').on('change', function() {
@@ -176,20 +176,13 @@ Date
 			});
 	</script>
 	<script type="text/javascript">
-		var doc = new jsPDF();
-		var specialElementHandlers = {
-		    '#editor': function (element, renderer) {
-		        return true;
-		    }
-		};
-
-		$('#cmd').click(function () {
-			console.log("sadsas");
-		    doc.fromHTML($('#box_for_the_form').html(), 15, 15, {
-		        'width': 170,
-		            'elementHandlers': specialElementHandlers
-		    });
-		    doc.save('sample-file.pdf');
+		$("#save").click(function() {
+		  var text = $("#output")[0].outerHTML;
+		  var styles = $("style")[0].outerHTML;
+		  var popup = window.open("", "popup");
+		  popup.document.body.innerHTML = text + styles;
+		  popup.focus();
+		  popup.print();
 		});
 	</script>
 </html>
