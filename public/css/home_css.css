@@ -13,6 +13,7 @@
 .start{
     background: url("/svg/back.svg") no-repeat;
     object-fit: cover; 
+    background-attachment: fixed;
 }
 
 #tagline{
@@ -110,12 +111,14 @@
     }
     to{
         
-        stroke: #ffbb00;
-        fill:#ffbb00;
+        stroke: #3c1053ff;
+        fill:#3c1053ff;
         stroke-dashoffset:0 ;
         
     }
 } 
+
+
 /* 
 .page2{
 background: linear-gradient(90deg,#EECDA3 39%, #EF629F 81%);
