@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>offer_letter_of_employment</title>
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/offer_letter.css">
+
+	<!-- JQUERY -->
+	<script
+		  src="https://code.jquery.com/jquery-3.4.1.js"
+		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		  crossorigin="anonymous"></script>
+
+	<!-- JS -->
+	<script type="text/javascript" src="/js/offer_letter.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<div id="google_translate_element"></div>
+		<div class=buttons>
+			<button id=play></button> &nbsp;
+			<button id=pause></button> &nbsp;
+			<button id=stop></button>
+		</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<form>
+				
+				<div id="q1" class="layer col-lg-4">
+					
+					<label for="qq1">What is the date on which the employer wishes to send this letter of offer?</label>
+					<div class="wrap-input100">
+				   <input id="qq1" class="input100" type="date" name="space_for_the_date" placeholder="04-03-2020" onchange="date_fill(this.value)">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq2">What is the full name of the representative of the employer who is offering the position?</label>
+					<div class="wrap-input100">
+				<input id="qq2" class="input100" type="text" placeholder="Janesh Rohira" name="space_for_representative_of_the_employer_who_is_offering_the_position" onchange="rep_fill(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq3">What is the company name of the employer?</label>
+					<div class="wrap-input100">
+				<input id="qq3" class="input100" type="text" name="space_for_company_name_of_the_employer" placeholder="Kshitij Pvt Lmt" onchange="company_fill(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+				
+				<div class="layer col-lg-4" id="q2">
+					<label for="qq4">What is the employer's full business address?</label>
+					<div class="wrap-input100">
+				   <input id="qq4" class="input100" type="text" name="space_for_employers_full_business_address" placeholder="Vaishali , East delhi" onchange="employer_add(this.value)">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq5">What is the new employee's full name?</label>
+					<div class="wrap-input100">
+				<input id="qq5" class="input100" type="text" name="space_for_the_employees_full_name" placeholder="Rajat Yadav" onchange="employee_name(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq6">What is the new employee's contact address?</label>
+					<div class="wrap-input100">
+				<input id="qq6" class="input100" type="text" name="space_for_the_new_employee_contact_address" placeholder="Jubliee Hills , Bangalore" onchange="employee_add(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+				
+
+				<div id="q3" class="layer col-lg-4">
+					<label for="">Is the employee being hired on a part-time or full-time basis?</label>
+					<div class="wrap-input100">
+						<input type="radio" name="part_or_full_time" value="full-time">Full time
+						<input type="radio" name="part_or_full_time" value="part-time">Part-time
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq8">What will the new employee's job title be?</label>
+					<div class="wrap-input100">
+				<input id="qq2" class="input100" type="input" name="new_employees_job_title" placeholder="Software Developer Engineer" onchange="job_title_fill(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq9">What will be the new employee's first day of work?</label>
+					<div class="wrap-input100">
+				<input id="qq9" class="input100" type="date" name="new_employees_first_day_of_work" onchange="first_day_fill(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+			
+
+				<div id="q4" class="layer col-lg-4">
+					<label for="qq10">What is the address at which the new employee will be required to work?</label>
+					<div class="wrap-input100">
+				   <input id="qq10" class="input100" type="text" placeholder="Andheri , Mumbai" name="address_at_which_the_new_employee will_be_required_to_work" onchange="add_of_work_fill(this.value)">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq11">What will the employee's annual salary be (in Indian Rupees)?</label>
+					<div class="wrap-input100">
+				<input id="qq11" class="input100" type="text" placeholder="Enter a number" name="employees_annual_salary" onchange="sal_fill(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="">Will there be a probation period?</label>
+					<div class="wrap-input100">
+						<input type="radio" name="if_no_probation_remove_this" value="Yes">Yes
+						<input type="radio" name="if_no_probation_remove_this" value="No">No
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+
+
+
+
+			
+			
+			</form>
+		</div>
+		<div class="col-lg-8" id="box_for_the_form">
+			<div class="box ">
+				<div class="content">
+			<pre id="output">
+                <article>
+<span class="space_for_representative_of_the_employer_who_is_offering_the_position">________</span>
+<span class="space_for_company_name_of_the_employer">________</span>
+<span class="space_for_employers_full_business_address">________</span>
+
+<span class="space_for_the_date">________</span>
+
+<span class="space_for_the_employees_full_name">________</span>
+<span class="space_for_the_new_employee_contact_address">________</span>
+
+
+Dear <span class="space_for_the_employees_full_name">________</span>,
+
+
+Re: Offer of Employment
+
+
+I am delighted to offer you employment on a <span class="employee_being_hired_on_a_part_tim_or_full_time_basis" style="background-color: red">full-time</span> basis in the role of <span class="new_employees_job_title">________</span>. It is intended for you to commence your employment on <span class="new_employees_first_day_of_work">________</span> ("Commencement Date").
+
+Please read through this letter carefully and indicate your acceptance of the offer by signing and returning a copy of this letter.
+
+1. Your Position
+You will be employed on the terms and conditions in this agreement, in the role of: <span class="new_employees_job_title">________</span>
+
+2. Location
+You will be based at the address shown below, although we may direct you to work at different locations from time to time:
+<span class="address_at_which_the_new_employee_will_be_required_to_work">________.</span>
+<span class="if_no_probation_remove_this">
+
+
+3. Probationary Period
+Your employment is subject to the satisfactory completion of a probationary period of one month.
+The probationary period is designed to grant the Employer time to assess whether you are able to fulfill your role with the Employer. During the probationary period your employment may be terminated by either you or the Employer upon providing 1 week written notice (or payment in lieu of that notice).
+
+</span>
+4. Hours of Work
+(a) As a full-time employee you will be required to devote substantially the whole of your time and attention during the Employer's ordinary business hours to the performance of your duties under this agreement.
+(b) You will not be entitled to receive any remuneration for work performed outside of the hours referred to in sub-clause (a) above.
+
+5. Salary and Benefits
+(a) Your annual salary will be Rs. <span class="employees_annual_salary">________ </span>.
+(b) This salary will be paid by weekly in the following manner:  deposit into nominated account.
+(c) The above mentioned salary is the total cost to the company and includes all payments made and benefits provided by the Employer directly or indirectly to or on your behalf, whether as salary or otherwise.
+
+6. Leave
+(a) You will be entitled to annual and long service leave in accordance with the applicable laws and the leave policy of the company.
+
+7. Company Policies
+You agree that the Employer's policies, as amended or replaced from time to time, shall be binding upon you but shall not form part of the employment contract.
+
+8. Confidentiality and Intellectual Property
+(a) You agree that you will not divulge any of the confidential information or trade secrets of the Employer to any person, whether during or after the termination of your employment.
+(b) You agree that you will not divulge any of the confidential information or trade secrets of the Employer to any person, whether during or after the termination of your employment.
+
+9. Termination
+(a) During your employment, either party may terminate this agreement by providing written notice of 3 months (or payment in lieu of notice) to the other party.
+(b) Notwithstanding sub-clause (a) above, the Employer may terminate this agreement by notice effective immediately without payment (except salary accrued to the date of termination) where you have committed an act of wilful or serious misconduct, are significantly neglectful of your duties, or you are in breach of this agreement.
+
+Acceptance
+This Letter of Offer contains the proposed Terms and Conditions of your employment with the Employer and is subject to the preparation and execution of a formal Contract of Employment.
+
+Yours sincerely,
+
+
+<span class="space_for_representative_of_the_employer_who_is_offering_the_position">________</span>
+<span class="space_for_company_name_of_the_employer">________</span>
+
+
+
+
+
+
+
+I, <span class="space_for_the_employees_full_name">________ </span>, accept and agree to the proposed terms of employment and request that the Employer prepare a formal contract of employment for execution.
+
+
+<span class="space_for_the_date">________________________</span>
+Date
+</article>
+			</pre>
+		</div>
+		</div>
+	</div>
+	</div>
+	<div id="editor"></div>
+	<button id='save'>Generate PDF</button>
+</body>
+	<script type="text/javascript">
+		$('input[type=radio][name=part_or_full_time]').on('change', function() {
+			  switch ($(this).val()) {
+			    case 'full-time':
+			      $(".employee_being_hired_on_a_part_tim_or_full_time_basis").text("full-time");
+			      break;
+			    case 'part-time':
+			      $(".employee_being_hired_on_a_part_tim_or_full_time_basis").text("part-time");
+			      break;
+			  }
+			});
+
+		$('input[type=radio][name=if_no_probation_remove_this]').on('change', function() {
+			  switch ($(this).val()) {
+			    case 'Yes':
+			      break;
+			    case 'No':
+			      $(".if_no_probation_remove_this").text("");
+			      break;
+			  }
+			});
+	</script>
+	<script type="text/javascript">
+		$("#save").click(function() {
+		  var text = $("#output")[0].outerHTML;
+		  var styles = $("style")[0].outerHTML;
+		  var popup = window.open("", "popup");
+		  popup.document.body.innerHTML = text + styles;
+		  popup.focus();
+		  popup.print();
+		});
+	</script>
+</html>

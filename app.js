@@ -16,6 +16,10 @@ app.get("/info",function(req,res){
     res.render("form_des.ejs");
 })
 
+app.get("/offer_letter",function(req,res){
+	res.render("offer_letter.ejs");
+})
+
 app.listen( process.env.PORT || 8000 , function(){
 	console.log("SERVER 8000 HAS STARTED");
 });
