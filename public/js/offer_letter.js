@@ -131,6 +131,11 @@ function nextpage(){
         document.querySelector('#banner').style.filter="blur(0)";
     }
 }
+if(i==4)
+document.getElementById("summary").disabled = false;
+else
+document.getElementById("summary").disabled = true;
+
 
 onload = function() {
     if ('speechSynthesis' in window) with(speechSynthesis) {
