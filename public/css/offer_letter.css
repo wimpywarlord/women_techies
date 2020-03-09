@@ -146,12 +146,85 @@ left: 50%;
 }
 
 
+.btn {
+    position: relative;
+    letter-spacing: 0.25em;
+    margin-top: 10px;
+    padding: 1rem 10.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: white;
+    }
+    
+    .btn:hover{
+      color: white!important;
+    }
+    
+    .btn::after, .btn::before {
+    content: "";
+    outline: none;
+    position: absolute;
+    height: 70%;
+    width: 28%;
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: -2;
+    }
+    
+    .btn::before {
+    background-color: #207ba5;
+    top: .3rem;
+    left: 21%;
+    }
+    
+    .btn::after {
+    background-color: #251772;
+    top: 1rem;
+    left: 50%;
+    }
+    
+    .btn:hover::before {
+    top: 13%;
+    left: 50%;
+    -webkit-transform: skewx(0deg);
+            transform: skewx(0deg);
+    }
+    
+    .btn:hover::after{
+      top: 13%;
+      left:23%;
+      -webkit-transform: skewx(0deg);
+              transform: skewx(0deg);
+    }
 
 
+.btn1{
+    position: relative;
+    left: 700px;
+    border:solid 1px black;
+    border-radius: 24px;
+    background: #020202;
+    color: white;
+    position: relative;
+    margin:10px;
+    padding: 10px;
+    outline: none;
+}
 
-
-
-
+.btn2{
+    border:solid 1px black;
+    border-radius: 24px;
+    background: #020202;
+    color: white;
+    position: relative;
+    left: 1000px;
+    margin:10px;
+    padding: 10px;
+    outline: none;
+}
 
 .wrap-input100 {
   position: relative;
@@ -246,7 +319,7 @@ left: 50%;
   padding-left: 18px;
 }
 
-#tv {
+#tv1 {
     padding: 50px;
     width: 80%;
     margin-left: 100px;
@@ -260,7 +333,27 @@ left: 50%;
     box-shadow: 20px 20px rgba(0,0,0,.15);
     transition: all .4s ease;
   }
-  #tv:hover {
+  #tv1:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+  }
+  
+  #tv2 {
+      display: none;
+    padding: 50px;
+    width: 80%;
+    margin-left: 600px;
+    margin-right: 100px;
+  
+    color:black ;
+    background: white,linear-gradient(#f9f047, #0fd850);
+    background: white;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+  }
+  #tv2:hover {
     border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
     box-shadow: 10px 10px rgba(0,0,0,.25);
   }
@@ -367,13 +460,13 @@ button {
   background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
 }
 
-button#save {
+/* button#save {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     color: black;
     text-decoration: none;
     outline: none;
-  }
+  } */
   
   .centered {
     position: absolute;

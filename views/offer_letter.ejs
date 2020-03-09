@@ -13,7 +13,8 @@
 		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		  crossorigin="anonymous"></script>
 
-	<!-- JS -->
+    <!-- JS -->
+   
 	<script type="text/javascript" src="/js/offer_letter.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
@@ -170,7 +171,7 @@
 			</form>
 		</div>
 		<div class="col-lg-8" id="box_for_the_form">
-			<div id="tv">
+			<div id="tv1">
 				<span class="span1"></span>
 				<span class="span2"></span>
 				<span class="span3"></span>
@@ -255,21 +256,27 @@ I, <span class="space_for_the_employees_full_name">________ </span>, accept and 
 
 <span class="space_for_the_date">________________________</span>
 Date
+<h1> </h1>
 </article>
 			</pre>
 		</div>
 		</div>
 	</div>
 	</div>
-	<div id="editor"></div>
-    <button id='save' class="h-button centered" data-text='Generate pdf'>
+    <div id="editor"></div>
+    <div class="col-lg-8"><div id="tv2">
+        <p><%= summary.output %></p>
+    </div></div>
+    
+    <!-- <button id='save' class="h-button centered" data-text='Generate pdf'>
         <span>T</span>
         <span>h</span>
         <span>a</span>
         <span>n</span>
         <span>k</span>
-        <span>s</span></button>   
-
+        <span>s</span></button>    -->
+        <button id="summary" class="btn1" onclick="togglediv(this)">summary</button>
+<button id="save" class="btn2"  onclick="saveTextAsFile(this)">generete pdf</button>
 </body>
  
 
@@ -282,7 +289,7 @@ Date
         popup.focus();
         popup.print();
         });
-</script>
+</script> 
 	<script type="text/javascript">
 		$('input[type=radio][name=part_or_full_time]').on('change', function() {
 			  switch ($(this).val()) {

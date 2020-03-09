@@ -197,3 +197,51 @@ onload = function() {
     }
 
 }
+
+// function saveTextAsFile()
+// {
+//     var textToWrite = document.getElementById('output').innerText;
+//     var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+//     var fileNameToSaveAs = "proxies.txt";
+
+//     var downloadLink = document.createElement("a");
+//     downloadLink.download = fileNameToSaveAs;
+//     downloadLink.innerHTML = "Download File";
+//     if (window.webkitURL != null)
+//     {
+//         // Chrome allows the link to be clicked
+//         // without actually adding it to the DOM.
+//         downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+//     }
+//     else
+//     {
+//         // Firefox requires the link to be added to the DOM
+//         // before it can be clicked.
+//         downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+//         downloadLink.onclick = function(){
+//             document.body.removeChild(downloadLink);
+//         };
+//         downloadLink.style.display = "none";
+//         document.body.appendChild(downloadLink);
+//     }
+
+//     downloadLink.click();
+// }
+
+
+function togglediv(){
+    console.log("working");
+    if($("#tv1").css("display") =="none"){
+        $("#tv1").css("display","flex");
+        $("#tv2").css("display","none");
+    }
+    else if($("#tv2").css("display")=="none"){
+        $("#tv1").css("display","none");
+        $("#tv2").css("display","flex");
+    }
+}
+var button = document.getElementById('save');
+
+function print(){
+    console.log(text);
+}
