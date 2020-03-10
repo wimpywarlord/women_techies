@@ -13,12 +13,11 @@
 		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		  crossorigin="anonymous"></script>
 
-    <!-- JS -->
+    <script type="text/javascript" src="/js/offer_letter.js"></script>
    
-	<script type="text/javascript" src="/js/offer_letter.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
-
+   
 </head>
 <body>
 	<script type="text/javascript">
@@ -28,12 +27,14 @@
         </script>
         
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		<div id="google_translate_element"></div>
+        <div id="google_translate_element"></div>
+        
 		<div class=buttons>
 			<button id=play></button> &nbsp;
 			<button id=pause></button> &nbsp;
 			<button id=stop></button>
-		</div>
+        </div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<div class="row">
 		<div class="col-lg-4">
 			<form>

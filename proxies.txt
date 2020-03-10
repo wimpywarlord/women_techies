@@ -1,22 +1,20 @@
-                
-
 janesh
-stark industries
+apple
 delhi
 
-2020-03-19
+2020-03-01
 
-yadav
-bangalore
+rajat
+hills
 
 
-Dear yadav,
+Dear rajat,
 
 
 Re: Offer of Employment
 
 
-I am delighted to offer you employment on a part-time basis in the role of software developer. It is intended for you to commence your employment on 2020-03-28 ("Commencement Date").
+I am delighted to offer you employment on a part-time basis in the role of software developer. It is intended for you to commence your employment on 2020-03-08 ("Commencement Date").
 
 Please read through this letter carefully and indicate your acceptance of the offer by signing and returning a copy of this letter.
 
@@ -39,7 +37,7 @@ The probationary period is designed to grant the Employer time to assess whether
 (b) You will not be entitled to receive any remuneration for work performed outside of the hours referred to in sub-clause (a) above.
 
 5. Salary and Benefits
-(a) Your annual salary will be Rs. 289323434.
+(a) Your annual salary will be Rs. 123456789.
 (b) This salary will be paid by weekly in the following manner:  deposit into nominated account.
 (c) The above mentioned salary is the total cost to the company and includes all payments made and benefits provided by the Employer directly or indirectly to or on your behalf, whether as salary or otherwise.
 
@@ -64,7 +62,7 @@ Yours sincerely,
 
 
 janesh
-stark industries
+apple
 
 
 
@@ -72,11 +70,8 @@ stark industries
 
 
 
-I, yadav, accept and agree to the proposed terms of employment and request that the Employer prepare a formal contract of employment for execution.
+I, rajat, accept and agree to the proposed terms of employment and request that the Employer prepare a formal contract of employment for execution.
 
 
-2020-03-19
+2020-03-01
 Date
-
-
-			

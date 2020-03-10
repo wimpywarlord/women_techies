@@ -10,6 +10,10 @@
     padding: 0;
 } */
 
+.start svg{
+    pointer-events: none;
+}
+
 .start{
     background: url("/svg/back.svg") no-repeat;
     object-fit: cover; 
@@ -118,6 +122,11 @@
     }
 } 
 
+.home_btn{
+    position: absolute;
+    top:70%;
+    left:43.5%
+}
 
 /* 
 .page2{
