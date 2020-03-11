@@ -4,25 +4,19 @@
 [![Think Big](https://img.shields.io/badge/Think-Big-orange.svg?style=for-the-badge)](https://www.linkedin.com/in/kshitijdhyani/)
 [![Work Hard](https://img.shields.io/badge/Work-Hard-blue.svg?style=for-the-badge)](https://github.com/wimpywarlord)
 
-WomenTechies'20
-Automation
-DECEPTIFORM
-WIMPY WARLORD
+Link to the website : https://deceptiform.herokuapp.com/
+
 The name of our product is deceptiform, let us break it down. The first half of the name of the product comes from the movie transformers and the main villains in the same movie are called Decepticons which are humongous robots with autonomous interstellar technology.
 
  The second half is a simple word “Form” which in its entirety means a method to ease the process of exchange of information via a set of input fields. 
-
 
 Lets us Fuse these two words together in an attempt to explain a product. Deceptiform, in other words, means the automation of filling of cumbersome forms which we often find ourselves stuck with, leading to either just staring at the complexly constructed pieces of papers or paying huge loads of money to some professional to decode the form and help us fill it.
 
 Lets us take an example to better understand the usability of the product. Let us say that you want to buy a piece of land and in order to do that you cant just simply smash a pile of cash on the desk and go on with your life celebrating the new purchase. 
 
-
 On a more simpler alternative reality, you would first have to hire a lawyer to bring about all the paperwork and then you have to sit down multiple times throughout the week, paying for every sitting to that notorious lawyer, trying to decode that encrypted piece of paper that lawyers have carefully curated to make it unreadable to a normal person in order to promote their business model. Enjoy hassle-free documentation with Deceptiform.
 
 Secondly, if you were in a documentation sector you would easily realise that an agreement or a formal doc could go up to 1000-2000 pages in length.
-
-
 
  In the face of such a situation, a legal professional or a documentation personal just simply go skimming through the document since they won't be sitting down reading a whole of 2000 pages for every single customer, this assures a guarantee of atleast missing out on atleast a few details, but not with deceptiform. Enjoy a 100% error-free documentation and form filling in lightening fast terms. 
 
@@ -35,13 +29,9 @@ All you need to do is enter the form template which is quite freely available on
 
 Just answer a few super simple straightforward question and witness our product smarty fill up the whole document. BOOM, enjoy your document hassle-free.  
 
-
 Let's not limit this application to legal documents, we come across such documents on very frequent occasions, for instance when you wanted to Join Vellore Institute of Technology – Vellore, you were handed hundreds of papers to fill and a thousand places to sign, or whenever you are looking to join a new organisation as an employee or whenever you end up going to the hospital or the notary.
 
-
  Be it a birthday invite or a simple non-disclosure agreement, simply enter the form template and enjoy the end product while you sip on your morning tea.
-
-
 
 This future of the project aims to make a central database of all the forms that are generally used in the country and make it a cakewalk to fill such forms. Giving a time benefit of a magnitude much greater than that of current standards.
 Save time, save money, and save the effort, go deceptiform.
@@ -64,7 +54,6 @@ git clone <http url>
 Download and install node.js from [here](https://nodejs.org/en/download/).
 
 Check if all the dependencies specified in the ```package.json``` are installed.
-
 
 ## Prerequisites
 
