@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deceptiform</title>
+	<!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/intake.css">
+
+	<!-- EDITOR -->
+	<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+
+	<!-- JQUERY -->
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.min.js"
+		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		  crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="row" id="box_for_taking_form">
+
+		<form action="/add_questions_to_the_form" method= "POST">
+				<h2 id="enter_the_form_heading">Enter the Form here.</h2>
+				
+				<br>
+					
+
+				<textarea placeholder="Enter your form here" rows="20" name="yummy" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+
+				<script>
+                        CKEDITOR.replace( 'yummy' );
+                </script>
+
+				<br>
+				<br>
+
+
+				<button class="btn btn-outline-info"><a href="/autoform">submit</a></button>
+
+				<br>
+				<br>
+
+		</form>
+
+	</div>
+
+</body>	
+</html>

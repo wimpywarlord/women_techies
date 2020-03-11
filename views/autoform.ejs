@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>offer_letter_of_employment</title>
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="/css/autoform.css">
+
+	<!-- JQUERY -->
+	<script
+		  src="https://code.jquery.com/jquery-3.4.1.js"
+		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		  crossorigin="anonymous"></script>
+          <!-- <meta name="google-signin-client_id" content="161447947728-m4jg40tfb4kmg0c13bdu07ui92l2vqc5.apps.googleusercontent.com">
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+ 
+    <script>
+        gapi.load('auth2',function(){
+            gapi.auth2.init();
+        })
+    </script> -->
+    <script type="text/javascript" src="/js/autoform.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+	<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <div id="google_translate_element"></div>
+        
+		<div class=buttons>
+			<button id=play></button> &nbsp;
+			<button id=pause></button> &nbsp;
+			<button id=stop></button>
+        </div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<div class="row">
+		<div class="col-lg-4">
+			<form>
+				
+				<div id="q1" class="layer col-lg-4">
+					
+					<label for="qq1"><%= questions.q[0] %> </label>
+					<div class="wrap-input100">
+				   <input id="qq1" class="input100" type="text" placeholder="Sankar" onchange="name_fill(this.value)">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq2"><%= questions.q[1] %></label>
+					<div class="wrap-input100">
+				<input id="qq2" class="input100" type="text" placeholder="Stark industries" onchange="comp_fill(this.value)">
+				   
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+					</div>
+					<label for="qq3"><%= questions.q[2] %></label>
+					<div class="wrap-input100">
+				<input id="qq3" class="input100" type="email" placeholder="kvs.sankar001@gmail.com" onchange="email_fill(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+                    </div>
+                    <label for="qq4"><%= questions.q[3] %></label>
+					<div class="wrap-input100">
+				<input id="qq3" class="input100" type="date" placeholder="date" onchange="date_fill(this.value)">
+				  
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fas fa-envelope-square"></i>
+						</span>
+                    </div>
+					<a class="btn" onclick="nextpage(this)" href="#">Next</a>
+				</div>
+				
+				
+			
+			</form>
+		</div>
+		<div class="col-lg-8" id="box_for_the_form">
+			<div id="tv1">
+				<pre >
+                    <span class="name_of_the_person">____ (NAME)
+                    ____</span>
+
+                    <span class="date_of_application">____ (DATE)</span>
+
+                    <span class="email_of_emp">____ (EMAIL)</span>
+
+                    To <span class="company_name">_____(COMPANY),</span>
+                    I am formally requesting you to give me few days leave of absence. I have finished almost all the projects assigned to me with only one remaining which I have given to my assistant to take care of it since he is as experienced just as I am in handling that remaining project. 
+
+                    Thank you for your consideration. 
+
+                    Yours Sincerely, 
+                    <span class="name_of_the_person">______(NAME)</span>
+                </pre>  
+            
+		</div>
+		</div>
+	</div>
+	
+    <div id="editor"></div>
+    <div class="col-lg-8"><div id="tv2">
+        
+    </div></div>
+    
+    <!-- <button id='save' class="h-button centered" data-text='Generate pdf'>
+        <span>T</span>
+        <span>h</span>
+        <span>a</span>
+        <span>n</span>
+        <span>k</span>
+        <span>s</span></button>    -->
+        <button id="summary" class="btn1" onclick="togglediv(this)">summary</button>
+<button id="save" class="btn2"  onclick="saveTextAsFile(this)">generete pdf</button>
+</body>
+ 
+
+<script type="text/javascript">
+    $("#save").click(function() {
+        var text = $("#output")[0].outerHTML;
+       
+        var popup = window.open("", "popup");
+        popup.document.body.innerHTML = text ;
+        popup.focus();
+        popup.print();
+        });
+</script> 
+	<script type="text/javascript">
+		$('input[type=radio][name=part_or_full_time]').on('change', function() {
+			  switch ($(this).val()) {
+			    case 'full-time':
+			      $(".employee_being_hired_on_a_part_tim_or_full_time_basis").text("full-time");
+			      break;
+			    case 'part-time':
+			      $(".employee_being_hired_on_a_part_tim_or_full_time_basis").text("part-time");
+			      break;
+			  }
+			});
+
+		$('input[type=radio][name=if_no_probation_remove_this]').on('change', function() {
+			  switch ($(this).val()) {
+			    case 'Yes':
+			      break;
+			    case 'No':
+			      $(".if_no_probation_remove_this").text("");
+			      break;
+			  }
+			});
+	</script>
+	
+</html>

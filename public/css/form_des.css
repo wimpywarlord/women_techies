@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Sen&display=swap');
+body{
+    background: rgb(66,118,198);
+    background: linear-gradient(90deg, rgba(66,118,198,1) 41%, rgba(0,212,255,1) 100%);
+}
+
+.req{
+    margin:100px;
+    background: white;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 24px;
+    box-shadow: 5px 10px 10px rgb(108, 181, 214);
+    display: flex;
+    flex-direction: row;
+   
+}
+
+
+#tv {
+  padding: 50px;
+  width: 80%;
+  margin-left: 100px;
+  margin-right: 100px;
+  position: absolute;
+  margin:100px;
+  
+  background: white,linear-gradient(#f9f047, #0fd850);
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  color: black;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+#tv:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+/* 
+.info{
+    position: absolute;
+    margin:100px;
+    margin-top: 50px;
+    background: white;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 24px;
+    box-shadow: 5px 10px 10px rgb(108, 181, 214);
+    
+} */
+
+.info h1{
+    margin:30px;
+    letter-spacing: .1rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
+}
+
+.info p,h3{
+    margin:30px;
+    font-family: 'Sen', sans-serif;
+    letter-spacing: .1rem;
+}
+.info h3{
+    margin:30px;
+    margin-bottom: 15px;
+    font-family: 'Sen', sans-serif;
+    letter-spacing: .1rem;
+}
+.goog-logo-link{
+    display: none;
+}
+
+
+a {
+    position: relative;
+    left: 40%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .cta {
+    position: relative;
+    margin: 20px;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(255, 171, 157, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+  .cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background: #ffab9d;
+  }
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
+
+  .buttons {
+    margin: 25px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    outline: none;
+    padding: 0;
+    width: 48px;
+}
+
+#play {
+    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play.svg);
+}
+
+#play.played {
+    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/play1.svg);
+}
+
+#pause {
+    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause.svg);
+}
+
+#pause.paused {
+    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/pause1.svg);
+}
+
+#stop {
+    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop.svg);
+}
+
+#stop.stopped {
+    background-image: url(https://rpsthecoder.github.io/js-speech-synthesis/stop1.svg);
+}
+
+.goog-te-combo{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 25px;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    font-size: 18px;
+    color: #60666d;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+    
+}
