@@ -83,6 +83,8 @@ Open your browser and type in the URL :
 localhost:8000
 ```
 
+It could be the case where your port number 8000 is already occupied , in that case just simply change the listen port in the app.js to any other number such as 5000 , 9000 etc.
+
 ## Built With
 
 [![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)](https://www.linkedin.com/in/kshitijdhyani/) [![KSHITIJ DHYANI](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://www.linkedin.com/in/kshitijdhyani/) 
