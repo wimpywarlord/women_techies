@@ -124,83 +124,97 @@ app.get("/info",function(req,res){
     res.render("form_des.ejs");
 })
 
-app.get("/offer_letter",function(req,res){
-	deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
+var unirest = require("unirest");
 
-(async function() {
-    var resp = await deepai.callStandardApi("summarization", {
-            text: `Dear ________,
+var req = unirest("POST", "https://textanalysis-text-summarization.p.rapidapi.com/text-summarizer-text");
+
+req.headers({
+	"content-type": "application/x-www-form-urlencoded",
+	"x-rapidapi-key": "7703ef81e0mshd5555ce8567e172p148f04jsn2f562e2f9571",
+	"x-rapidapi-host": "textanalysis-text-summarization.p.rapidapi.com",
+	"useQueryString": true
+});
+
+req.form({
+	"text": `Re: Offer of Employment
 
 
-			Re: Offer of Employment
-			
-			
-			I am delighted to offer you employment on a full-time basis in the role of ________. It is intended for you to commence your employment on ________ ("Commencement Date").
-			
-			Please read through this letter carefully and indicate your acceptance of the offer by signing and returning a copy of this letter.
-			
-			1. Your Position
-			You will be employed on the terms and conditions in this agreement, in the role of: ________
-			
-			2. Location
-			You will be based at the address shown below, although we may direct you to work at different locations from time to time:
-			________.
-			
-			
-			
-			3. Probationary Period
-			Your employment is subject to the satisfactory completion of a probationary period of one month.
-			The probationary period is designed to grant the Employer time to assess whether you are able to fulfill your role with the Employer. During the probationary period your employment may be terminated by either you or the Employer upon providing 1 week written notice (or payment in lieu of that notice).
-			
-			
-			4. Hours of Work
-			(a) As a full-time employee you will be required to devote substantially the whole of your time and attention during the Employer's ordinary business hours to the performance of your duties under this agreement.
-			(b) You will not be entitled to receive any remuneration for work performed outside of the hours referred to in sub-clause (a) above.
-			
-			5. Salary and Benefits
-			(a) Your annual salary will be Rs. ________ .
-			(b) This salary will be paid by weekly in the following manner:  deposit into nominated account.
-			(c) The above mentioned salary is the total cost to the company and includes all payments made and benefits provided by the Employer directly or indirectly to or on your behalf, whether as salary or otherwise.
-			
-			6. Leave
-			(a) You will be entitled to annual and long service leave in accordance with the applicable laws and the leave policy of the company.
-			
-			7. Company Policies
-			You agree that the Employer's policies, as amended or replaced from time to time, shall be binding upon you but shall not form part of the employment contract.
-			
-			8. Confidentiality and Intellectual Property
-			(a) You agree that you will not divulge any of the confidential information or trade secrets of the Employer to any person, whether during or after the termination of your employment.
-			(b) You agree that you will not divulge any of the confidential information or trade secrets of the Employer to any person, whether during or after the termination of your employment.
-			
-			9. Termination
-			(a) During your employment, either party may terminate this agreement by providing written notice of 3 months (or payment in lieu of notice) to the other party.
-			(b) Notwithstanding sub-clause (a) above, the Employer may terminate this agreement by notice effective immediately without payment (except salary accrued to the date of termination) where you have committed an act of wilful or serious misconduct, are significantly neglectful of your duties, or you are in breach of this agreement.
-			
-			Acceptance
-			This Letter of Offer contains the proposed Terms and Conditions of your employment with the Employer and is subject to the preparation and execution of a formal Contract of Employment.
-			
-			Yours sincerely,
-			
-			
-			________
-			________
-			
-			
-			
-			
-			
-			
-			
-			I, ________ , accept and agree to the proposed terms of employment and request that the Employer prepare a formal contract of employment for execution.
-			
-			
-			________________________
-			Date
-			 `,
-    });
-	console.log(resp);
-	res.render("offer_letter.ejs",{summary:resp.output});
-})()
+	I am delighted to offer you employment on a full-time basis in the role of ________. It is intended for you to commence your employment on ________ ("Commencement Date").
+	
+	Please read through this letter carefully and indicate your acceptance of the offer by signing and returning a copy of this letter.
+	
+	1. Your Position
+	You will be employed on the terms and conditions in this agreement, in the role of: ________
+	
+	2. Location
+	You will be based at the address shown below, although we may direct you to work at different locations from time to time:
+	________.
+	
+	
+	
+	3. Probationary Period
+	Your employment is subject to the satisfactory completion of a probationary period of one month.
+	The probationary period is designed to grant the Employer time to assess whether you are able to fulfill your role with the Employer. During the probationary period your employment may be terminated by either you or the Employer upon providing 1 week written notice (or payment in lieu of that notice).
+	
+	
+	4. Hours of Work
+	(a) As a full-time employee you will be required to devote substantially the whole of your time and attention during the Employer's ordinary business hours to the performance of your duties under this agreement.
+	(b) You will not be entitled to receive any remuneration for work performed outside of the hours referred to in sub-clause (a) above.
+	
+	5. Salary and Benefits
+	(a) Your annual salary will be Rs. ________ .
+	(b) This salary will be paid by weekly in the following manner:  deposit into nominated account.
+	(c) The above mentioned salary is the total cost to the company and includes all payments made and benefits provided by the Employer directly or indirectly to or on your behalf, whether as salary or otherwise.
+	
+	6. Leave
+	(a) You will be entitled to annual and long service leave in accordance with the applicable laws and the leave policy of the company.
+	
+	7. Company Policies
+	You agree that the Employer's policies, as amended or replaced from time to time, shall be binding upon you but shall not form part of the employment contract.
+	
+	8. Confidentiality and Intellectual Property
+	(a) You agree that you will not divulge any of the confidential information or trade secrets of the Employer to any person, whether during or after the termination of your employment.
+	(b) You agree that you will not divulge any of the confidential information or trade secrets of the Employer to any person, whether during or after the termination of your employment.
+	
+	9. Termination
+	(a) During your employment, either party may terminate this agreement by providing written notice of 3 months (or payment in lieu of notice) to the other party.
+	(b) Notwithstanding sub-clause (a) above, the Employer may terminate this agreement by notice effective immediately without payment (except salary accrued to the date of termination) where you have committed an act of wilful or serious misconduct, are significantly neglectful of your duties, or you are in breach of this agreement.
+	
+	Acceptance
+	This Letter of Offer contains the proposed Terms and Conditions of your employment with the Employer and is subject to the preparation and execution of a formal Contract of Employment.
+	
+	Yours sincerely,
+	
+	
+	________
+	________
+	
+	
+	
+	
+	
+	
+	
+	I, ________ , accept and agree to the proposed terms of employment and request that the Employer prepare a formal contract of employment for execution.
+	
+	
+	________________________
+	Date`,
+	"sentnum": "5"
+});
+
+var final;
+req.end(function (res) {
+	if (res.error) throw new Error(res.error);
+	final = res.body
+	console.log(res.body);
+});
+app.get("/offer_letter", function (req, res) {
+	// Example directly sending a text string:
+
+
+	res.render("offer_letter.ejs",{summary:final});
+
 	
 })
 
